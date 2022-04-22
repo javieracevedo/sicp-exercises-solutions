@@ -39,3 +39,11 @@
             #f)))
 
 (filtered-accumulate * 1 identity 1 increment 14 (co-prime? 14))
+
+
+; Ecludian way of finding GCD
+
+; (define (gcd a b)
+;     (cond ((> a b) (gcd b a))
+;           ((= b 0) a)
+;           (else (gcd a (remainder b a)))))
