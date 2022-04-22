@@ -23,3 +23,19 @@
 
 (define (identity x) x)
 (filtered-accumulate + 0 identity 1 increment 9 prime?)
+
+
+(define (find-gcd a b divisor)
+            (if (and (= (remainder a divisor) 0) (= (remainder b divisor) 0))
+                divisor
+                (find-gcd a b (- divisor 1))))
+
+(define (co-prime? b)
+    (lambda (a) 
+        (define divisor (if (= a 1) 1 (- a 1)))
+        
+        (if (and (= (find-gcd a b divisor) 1) (not (= a b))) 
+            #t
+            #f)))
+
+(filtered-accumulate * 1 identity 1 increment 14 (co-prime? 14))
