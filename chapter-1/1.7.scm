@@ -1,3 +1,5 @@
+#lang scheme
+
 (define (square a) (* a a))
 
 (define (good-enough? guess x)

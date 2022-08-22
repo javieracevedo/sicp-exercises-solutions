@@ -1,3 +1,5 @@
+#lang scheme
+
 (define (p) (p))
 
 (define (test x y)

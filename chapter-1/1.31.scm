@@ -1,3 +1,5 @@
+#lang scheme
+
 ; Product 
 
 (define (product term a next b)

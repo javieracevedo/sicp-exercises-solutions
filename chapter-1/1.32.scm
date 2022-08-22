@@ -1,3 +1,5 @@
+#lang scheme
+
 ; Accumulate
 
 (define (accumulate combiner null-value term a next b)
